@@ -1,0 +1,18 @@
+  <table>
+    <tr>
+      <th>Name</a></th>
+      <th>Date</th> 
+      <th>Time</th>
+      <th>Location</th>
+      <th>Description</th>
+    </tr>
+    <% e.forEach(function (i) { %>
+    <tr>
+      <td><a><%= i.meeting_name %></a></td>
+      <td> <%= i.date %> </td> 
+      <td> <%= i.time %> </td>
+      <td> <%= i.location %> </td> 
+      <td> <%= i.description %> </td>
+    </tr>
+    <% }); %>
+  </table>

@@ -1,0 +1,51 @@
+.centerBox {
+    height: 10em;
+    position: relative;
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Messages for chatting*/
+.chat {
+	padding: 3px; 
+	position: relative; 
+	bottom: 0; 
+	width: 100%; 
+	overflow: scroll; 
+	overflow-y:auto;
+}
+.chatline { 
+	border: 0; 
+	padding: 10px; 
+	width: 100%; 
+	margin-right: .5%; 
+}
+
+.scroll {
+    height:300px;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+#messages { list-style-type: none; margin: 0; padding: 0; }
+#messages li { padding: 5px 10px;}
+#messages li:nth-child(odd) { background: #eee; }
+
+/* Background for login and sign up */
+.loginbackground {
+    background-image: url("../img/background"); no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+};  
+
+big {
+	font-size: 10em;
+	text-align: center;
+}

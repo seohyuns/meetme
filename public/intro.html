@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/javascripts/clientSocket.js"></script>
+		<link rel="stylesheet" type="/text/css" href="css/style.css">
+		<link rel="stylesheet" href="/css/foundation.css">
+  		<script src="/javascripts/vendor/modernizr.js"></script>
+  		<script src="/javascripts/vendor/jquery.js"></script>
+  		<script src="/javascripts/foundation.min.js"></script>
+  		<script language="javascripts" type="text/javascript" src="javascripts/signup.js"></script>
+	</head>
+
+	<body>
+		<br>
+		<div class="row">
+			<div class="small-2 large-4 columns">...</div>
+
+			<div class="small-4 large-4 columns">
+				<h1>meetme</h1>
+
+<!-- 				<form>
+					<input id="username" name="username" type="text" placeholder="Username" class="form-input">  
+					<input id="passwordinput" name="passwordinput" type="password" placeholder="Password" class="form-input">
+			    	<button id="login" name="login" class="btn btn-primary">Login</button>
+				</form> -->
+					<% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+    <!-- LOGIN FORM -->
+    <form action="/login" method="post">
+        <div>
+            <label>Email</label>
+            <input type="text" name="email">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password">
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg">Login</button>
+    </form>
+
+
+			</div> 
+
+			<!-- show any messages that come back with authentication -->
+
+			<div class="small-6 large-4 columns">
+				<button style="float:right">Sign Up</button>
+			</div>
+		</div>
+	</body>
+</html>

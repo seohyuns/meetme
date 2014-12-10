@@ -1,0 +1,86 @@
+
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/javascripts/chat.js"></script>
+		<link rel="stylesheet" type="/text/css" href="css/style.css">
+		<link rel="stylesheet" href="/css/foundation.css">
+  		<!--<link rel="stylesheet" href="/css/style.css">-->
+  		<script src="/javascripts/vendor/modernizr.js"></script>
+  		<script src="/javascripts/vendor/jquery.js"></script>
+  		<script src="/javascripts/foundation.min.js"></script>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+
+
+
+	</head>
+
+	<body>
+		<header>
+			<nav class="top-bar" data-topbar role="navigation">
+				<ul class="title-area">
+					<li class="name">
+					  <h1><a href="#">meetme</a></h1>
+					</li>
+				 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+				</ul>
+
+				<section class="top-bar-section">
+				<!-- Right Nav Section -->
+					<ul class="right">
+						<li class="active"><a href="#">Right Button Active</a></li>
+						<li class="has-dropdown">
+							<a href="#">Profile</a>
+							<ul class="dropdown">
+							  <li><a href="#">First link in dropdown</a></li>
+							  <li class="active"><a href="#">Active link in dropdown</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<!-- Left Nav Section -->
+					<ul class="left">
+					  <li><a href="#">about</a></li>
+					</ul>
+				</section>
+			</nav>
+		</header>
+
+		<div class="row">
+		</div>
+
+		<br></br>
+
+		<div class="row">
+			<div class="small-8 columns">...</div>
+			
+			<div class="small-4 columns">
+				<div class="panel">
+					<h3 class="subheader">Chat Live!</h3>
+
+					<div class="row">
+						<ul id="people"></ul>
+					</div>
+					
+					<div class="row">
+							<ul id="messages" class="panel, scroll"></ul>
+					</div>
+
+					<div class="row">
+						<form action="" class="chat" id="chat-form">
+							<input class="chatline" id="m" autocomplete="off"/><br></br>
+							<button class="tiny radius" style="float: right;">Send</button>
+						</form>
+					</div>
+
+
+				</div>		
+			</div>
+		</div>
+
+
+
+	</body>
+</html>

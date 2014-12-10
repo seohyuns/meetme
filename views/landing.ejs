@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/javascripts/clientSocket.js"></script>
+		<link rel="stylesheet" type="/text/css" href="css/style.css">
+		<link rel="stylesheet" href="/css/foundation.css">
+  		<script src="/javascripts/vendor/modernizr.js"></script>
+  		<script src="/javascripts/vendor/jquery.js"></script>
+  		<script src="/javascripts/foundation.min.js"></script>
+  		<script src="/javascripts/logoutButton.js"></script>
+		<script type="application/javascript" src="javascripts/meetingWork.js"></script>
+	</head>
+     <script>
+        trigger.user = <%- JSON.stringify(user) %>            
+     </script>
+	<body> 
+		<nav class="top-bar"sdata-topbar role="navigation">
+			<ul class="title-area">
+				<li class="name">
+				  <h1><a href="/landing">meetme</a></h1>
+				</li>
+			 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			</ul>
+
+			<section class="top-bar-section">
+			<!-- Right Nav Section -->
+				<ul class="right">
+					<li class="active"><a href="/newGroup.html">Plan a New Meeting!</a></li>
+					<li><a id="logout">Log Out</a></li>
+				</ul>
+
+				<!-- Left Nav Section -->
+			</section>
+		</nav>
+<br>
+		<div class="row">
+			<h1 class="subheader">
+				Welcome, <%= user.local.firstname %> <span id="firstname"></span> 
+			</h1>
+		</div>
+
+<br>
+		<div class="row">
+			<div class="small-9 columns">
+				<div class="row">
+					<h3>Your meetme<h3>
+
+						
+
+					<div id="your-meetings"></div>
+				</div>
+
+				<div class="row">
+					<div id="response-area-get"></div>
+				</div>
+			</div>
+
+
+
+
+			<div class="small-3 columns">
+				<div class="row">
+
+				</div>
+
+				<div class="row panel" >
+				    <h4>Find meetme</h4>
+			        <form id="get-form">
+			        	<label>Meeting Name</label>
+			            <input type="text" id="meeting_name_get">
+			            <button type="submit" value="Submit" class="button tiny" style="float:right">Find!</button>
+			        </form>
+
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+	</body>
+</html>

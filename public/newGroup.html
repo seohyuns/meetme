@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/javascripts/clientSocket.js"></script>
+		<link rel="stylesheet" type="/text/css" href="css/style.css">
+		<link rel="stylesheet" href="/css/foundation.css">
+  		<link rel="stylesheet" href="/css/app.css">
+  		<script src="/javascripts/vendor/modernizr.js"></script>
+  		<script src="/javascripts/vendor/jquery.js"></script>
+  		<script src="/javascripts/foundation.min.js"></script>
+ 		<script type="application/javascript" src="javascripts/meetingWork.js"></script>
+	</head>
+
+	<body>
+		<nav class="top-bar" data-topbar role="navigation">
+			<ul class="title-area">
+				<li class="name">
+				  <h1><a href="/landing">meetme</a></h1>
+				</li>
+			 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			</ul>
+
+			<section class="top-bar-section">
+			<!-- Right Nav Section -->
+				<ul class="right">
+					<li class="active"><a href="/newGroup.html">Plan a New Meeting!</a></li>
+					<li><a id="logout">Log Out</a></li>
+					<li class="has-dropdown">
+						<a href="#">Menu</a>
+						<ul class="dropdown">
+						  <li><a id="logout">Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<!-- Left Nav Section -->
+			</section>
+		</nav>
+
+<br>
+
+		<div class="row">
+			<div class="small-6 large-6 columns">
+				<div class="panel">
+					<h3>Add a Meeting </h3>
+					    <form id="add-form">
+					        Meeting Name: <input type="text" id="meeting_name"><br>
+					        Date: <h4><small>Month/Day/Year ex)04/09/2015</small></h4><input type="text" id="date"><br>
+					        Time: <h4><small>ex) 7 PM</small></h4><input type="text" id="time"><br>
+					        Location: <input type="text" id="location"><br>
+					        Description: <input type="text" id="description"><br>
+					        <button type="submit" class="button tiny" value="Submit">Submit</button>
+        		        	<div id="add"></div>
+					    </form>
+
+
+		        </div>
+		    </div>
+
+			<div class="small-6 large-6 columns">
+				<div class="panel">
+					<h3>Update Group</h3>
+					<form id="update-form">
+					    Meeting Name: <input type="text" id="meeting_name_update"><br>
+					    Date: <h4><small>Month/Day/Year ex)04/09/2015</small></h4><input type="text" id="date_update"><br>
+					    Time: <h4><small>ex) 7 PM</small></h4><input type="text" id="time_update"><br>
+					    Location: <input type="text" id="location_update"><br>
+					    Description: <input type="text" id="description_update"><br>
+					    <button type="submit" class="button tiny" value="Submit">Submit</buton>
+					</form>
+
+				</div>
+        	</div>
+		</div>
+
+
+
+	</body>
+</html>
