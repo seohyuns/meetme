@@ -1,4 +1,4 @@
-var meetingModel = require ('../models/meetingMongoose.js');
+var meetingModel = require ('../models/meetingmongoose.js');
 
 //get meetings of the current user
 // exports.getYourMeeting = function(request, response){

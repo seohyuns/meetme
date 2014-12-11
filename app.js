@@ -1,5 +1,4 @@
 // Normal Express requires...
-console.log("start");
 var express = require('express');
 var http = require('http');
 var morgan = require('morgan');
@@ -12,7 +11,6 @@ var bodyParser   = require('body-parser');
 var session      = require('express-session');
 var engine  = require( 'ejs-locals' );
 
-console.log("require done");
 
 ////initializes the engine for ejs
 app.engine( 'ejs', engine );
@@ -41,7 +39,6 @@ app.get("/get/:meeting_name", meetingRoutes.getMeeting);
 
 app.delete("/delete/:meeting_name", meetingRoutes.deleteMeeting);
 
-console.log("routes done");
 
 // app.get("/landing", meetingRoutes.getYourMeeting);
 
