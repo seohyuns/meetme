@@ -2,7 +2,7 @@
   "name": "countPlayers",
   "description": "Example of socket.io use",
   "scripts": {
-    "start": "node app"
+    "start": "node app.js"
   },
   "version": "0.0.1-2",
   "engines": {
