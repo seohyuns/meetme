@@ -1,5 +1,9 @@
 var socket = io();
-
+var name;
+var setUsername = function(n) {
+	name = n;
+	console.log(' the name is ' + name);
+}
 $(document).ready(function() {
 	console.log("the user is" + trigger.user);
 	$('.chat').submit(function(e){
@@ -12,7 +16,7 @@ $(document).ready(function() {
 
 
 	socket.on('chat message', function(msg){
-	$('#messages').append($("<li>").text(msg));
+	$('#messages').append($("<li>").text(name + ':'+ msg));
 	});
 
 	socket.on('users', function (data) {
