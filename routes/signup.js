@@ -1,5 +1,5 @@
 // app/routes.js
-var meetingModel = require ('../models/meetingMongoose.js');
+var meetingModel = require ('../models/meetingmongoose.js');
 
 module.exports = function(app, passport) {
 
