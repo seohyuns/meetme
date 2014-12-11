@@ -88,9 +88,10 @@ app.get('/login', function(req, res) {
 /*2*/ var sio =require('socket.io');
 /*3*/ var io = sio(httpServer);
 var port = process.env.OPENSHIFT_NODEJS_PORT || 50000;
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 
 
-/*4*/ 	httpServer.listen(port, function(){
+/*4*/ 	httpServer.listen(port, ipaddress, function(){
 			console.log('Listening on 50000');}
 		);
 
