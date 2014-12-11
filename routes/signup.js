@@ -84,6 +84,8 @@ module.exports = function(app, passport) {
         res.redirect('/login');
     });
 
+    //comment
+
     // process the signup form
     app.post('/signup', passport.authenticate('local-signup', {
         successRedirect : '/landing', // redirect to the secure profile section
