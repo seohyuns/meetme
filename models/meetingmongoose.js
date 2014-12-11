@@ -8,19 +8,21 @@ function doError(err) {
   console.log("Got error " + err);
 };
 
-exports.addMeeting =  function(meeting_name, time, date, location, description, callback) {
+exports.addMeeting =  function(req, callback) {
   Meeting.create(
   {
-    meeting_name: meeting_name, 
-    time: time, 
-    date: date, 
-    location: location, 
-    description: description
+    meeting_name: req.params.meeting_name, 
+    time: req.params.time, 
+    date: req.params.date, 
+    location: req.params.location, 
+    description: req.params.description,
+    activeUserId: req.user._id
   },
   {safe:true},
   function(err, crsr) {
       if (err) doError(err);
       console.log("completed mongo insert");
+      console.log(crsr);
       callback(crsr);
       console.log("done with insert callback");
   });
@@ -69,7 +71,7 @@ exports.showMeeting = function() {
 
 
 
-exports.updateMeeting = function(meeting_name, time, location, description, callback) {
+exports.updateMeeting = function(meeting_name, time, location, description, user, callback) {
   Meeting.update(
   {meeting_name : meeting_name},
   {
@@ -77,7 +79,8 @@ exports.updateMeeting = function(meeting_name, time, location, description, call
       time: time,
       date: date,
       location: location,
-      description: description
+      description: description,
+      //activeUserId.push(user._id)
   },
   function(err,crsr) {
       if (err) doError(err);

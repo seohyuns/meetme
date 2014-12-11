@@ -59,7 +59,7 @@ $(document).ready(function(){
             type: 'GET',
             success: function(result) {
                 if (meeting_name){
-                    $('#response-area-get').html(JSON.stringify(result));
+                    $('#response-area-get').html(result);
                 }else {
                     $('#response-area-get').html(result);
                     console.log(result);
@@ -76,11 +76,11 @@ $(document).ready(function(){
         var location = $('#location').val();
         var description = $('#description').val();
         $.ajax({
-            url: '/post' + '/' + meeting_name + '/'  + date + '/' + time + '/' + location + '/' + description, 
+            url: '/post' + '/' + meeting_name + '/'  + date + '/' + time + '/' + location + '/' + description + '/' , 
             type: 'POST',
             success: function(result) {
                 console.log(result);
-                $('#response-area-update').html(JSON.stringify(result));
+               // $('#response-area-update').html(JSON.stringify(result));
             // Do something with the result
         }
         });

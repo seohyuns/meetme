@@ -1,4 +1,5 @@
 // Normal Express requires...
+console.log("start");
 var express = require('express');
 var http = require('http');
 var morgan = require('morgan');
@@ -11,6 +12,7 @@ var bodyParser   = require('body-parser');
 var session      = require('express-session');
 var engine  = require( 'ejs-locals' );
 
+console.log("require done");
 
 ////initializes the engine for ejs
 app.engine( 'ejs', engine );
@@ -21,7 +23,6 @@ app.set( 'view engine', 'ejs' );
 var meetingRoutes = require('./routes/meetingRoutes.js');
 var meeting = require('./models/meetingmongoose.js');
 var config = require('./config'); //connects to my database
-
 
 app.use(morgan('combined'));
 
@@ -37,9 +38,10 @@ app.put("/put/:meeting_name/:date/:time/:location/:description", meetingRoutes.p
 
 app.get("/get/:meeting_name", meetingRoutes.getMeeting);
 
-app.post("/post/:meeting_name/:date/:time/:location/:description", meetingRoutes.updateMeeting);
+
 app.delete("/delete/:meeting_name", meetingRoutes.deleteMeeting);
 
+console.log("routes done");
 
 // app.get("/landing", meetingRoutes.getYourMeeting);
 

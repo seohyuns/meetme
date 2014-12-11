@@ -8,7 +8,7 @@ var meetingSchema = Schema({
   date: Date,
   location: String,
   description: Schema.Types.Mixed,
-  activeUserId: [Schema.ObjectId]
+  activeUserId: Schema.ObjectId
 });
 
 module.exports = mongoose.model('meeting', meetingSchema);

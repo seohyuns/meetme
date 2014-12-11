@@ -58,15 +58,22 @@ module.exports = function(app, passport) {
     app.get('/landing', function(req, res) {
         var temp = req.user;
         console.log("signup.js=" + temp);
-        res.render('landing.ejs', {
-            user : temp, // get the user out of session and pass to template
-        });
-        var meetings =   meetingModel.getYourMeetings(temp,function(temp){
+        meetingModel.getYourMeetings(temp,function(meetings){
             console.log("getyourmeetings was hit in signup.js");
-            response.render('group', {e: meetings})
+            console.log(meetings);
+            res.render('landing', {m: meetings, user:temp})
         });
     });
 
+    // =====================================
+    // ADDING NEW ==========================
+    // =====================================
+    app.post("/post/:meeting_name/:date/:time/:location/:description", function(req, res){
+        meetingRoutes.addMeeting(req, function(meeting){
+            console.log(req);
+            console.log("successfully posted");
+        }); 
+    });
 
 
     // =====================================

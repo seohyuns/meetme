@@ -40,7 +40,8 @@ exports.getMeeting = function(request, response) {
 
 exports.putMeeting = function(request, response) {
     console.log("the put meeting method in meetingRoutes.js was hit");
-    meetingModel.addMeeting( request.params.meeting_name, request.params.time, request.params.date, request.params.location, request.params.description,
+    console.log(request.params.user);
+    meetingModel.addMeeting( request.params.meeting_name, request.params.time, request.params.date, request.params.location, request.params.description, request.user,
         function(meeting){response.send(meeting);
             console.log("sent response");
     });     

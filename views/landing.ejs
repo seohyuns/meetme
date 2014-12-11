@@ -47,9 +47,28 @@
 				<div class="row">
 					<h3>Your meetme<h3>
 
-						
 
-					<div id="your-meetings"></div>
+
+					  <table>
+					    <tr>
+					      <th>Name</a></th>
+					      <th>Date</th> 
+					      <th>Time</th>
+					      <th>Location</th>
+					      <th>Description</th>
+					    </tr>
+					    <% m.forEach(function (i) { %>
+					    <tr>
+					      <td> <a id="meeting_name_from_table" href=/get/page/<%=i.meeting_name%>><%= i.meeting_name %></a></td>
+					      <td> <%= i.date %> </td> 
+					      <td> <%= i.time %> </td>
+					      <td> <%= i.location %> </td> 
+					      <td> <%= i.description %> </td>
+					      <!--<td><button class="button tiny round">join</button></td>-->
+					    </tr>
+					    <% }); %>
+					  </table>
+
 				</div>
 
 				<div class="row">
